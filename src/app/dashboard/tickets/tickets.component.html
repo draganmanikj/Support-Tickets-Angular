@@ -1,7 +1,7 @@
 <div *ngIf="tickets.length > 0; else noTickets" >
         <ul *ngFor="let ticket of tickets;">
                 <li>
-                        <app-ticket [data]="ticket"/>
+                        <app-ticket [data]="ticket" (close)="onCloseTicket(ticket.id)"/>
                 </li>
         </ul>
         
